@@ -1,11 +1,8 @@
-//  Copyright 2005-2010 Portland State University, University of Wisconsin-Madison
-//  Authors:  Robert M. Scheller, Jimm Domingo
 
 using Edu.Wisc.Forest.Flel.Util;
-using Landis.Core;
 using System.Collections.Generic;
 
-namespace Landis.Extension.Output.WildlifeHabitat
+namespace Landis.Extension.Output.LocalHabitat
 {
     /// <summary>
     /// Methods for working with the template for filenames of reclass maps.

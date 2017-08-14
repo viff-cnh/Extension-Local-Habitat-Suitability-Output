@@ -1,10 +1,7 @@
-//  Copyright 2005-2010 Portland State University, University of Wisconsin-Madison
-//  Authors:  Robert M. Scheller, Jimm Domingo
 
-using Edu.Wisc.Forest.Flel.Util;
 using System.Collections.Generic;
 
-namespace Landis.Extension.Output.WildlifeHabitat
+namespace Landis.Extension.Output.LocalHabitat
 {
     /// <summary>
     /// The definition of a reclass map.

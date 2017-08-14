@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Landis.Extension.Output.WildlifeHabitat")]
+[assembly: AssemblyTitle("Landis.Extension.Output.LocalHabitat")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("USDA Forest Service")]
-[assembly: AssemblyProduct("Landis.Extension.Output.WildlifeHabitat.Properties")]
-[assembly: AssemblyCopyright("Copyright © USDA Forest Service 2014")]
+[assembly: AssemblyProduct("Landis.Extension.Output.LocalHabitat.Properties")]
+[assembly: AssemblyCopyright("Copyright © USDA Forest Service 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -1,20 +1,18 @@
-//  Copyright 2005-2010 Portland State University, University of Wisconsin-Madison
-//  Authors:  Robert M. Scheller, Jimm Domingo
+//  Authors:  Brian R. Miranda
 
 using Landis.Core;
 using Landis.Library.BiomassCohorts;
 using Landis.SpatialModeling;
 using System.Collections.Generic;
-using System;
 
-namespace Landis.Extension.Output.WildlifeHabitat
+namespace Landis.Extension.Output.LocalHabitat
 {
     public class PlugIn
         : ExtensionMain
     {
 
         public static readonly  new ExtensionType Type = new ExtensionType("output");
-        public static readonly string ExtensionName =  "Wildlife Habitat Output";
+        public static readonly string ExtensionName =  "Local Habitat Output";
 
         private string mapNameTemplate;
         private List<string> suitabilityFiles;
@@ -355,7 +353,7 @@ namespace Landis.Extension.Output.WildlifeHabitat
                 {
                     string mapName = mySuitabilityParameters.WildlifeName;
                     string path = MapFileNames.ReplaceTemplateVars(mapNameTemplate, mapName, modelCore.CurrentTime);
-                    ModelCore.UI.WriteLine("   Writing Wildlife Habitat Output map to {0} ...", path);
+                    ModelCore.UI.WriteLine("   Writing Habitat Output map to {0} ...", path);
                     using (IOutputRaster<IntPixel> outputRaster = modelCore.CreateRaster<IntPixel>(path, modelCore.Landscape.Dimensions))
                     {
                         IntPixel pixel = outputRaster.BufferPixel;

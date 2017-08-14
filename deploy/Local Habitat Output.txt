@@ -1,0 +1,10 @@
+LandisData   Extension
+
+Name         "Local Habitat Output"
+Version      "1.0 (beta 2 release)"
+Type         output
+Assembly     Landis.Extension.Output.LocalHabitat
+Class        Landis.Extension.Output.LocalHabitat.PlugIn
+Description  "Local habitat suitability output"
+UserGuide    "LANDIS-II Local Habitat Output v1.0 User Guide.pdf"
+CoreVersion  6.2

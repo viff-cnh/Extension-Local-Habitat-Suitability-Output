@@ -2,7 +2,7 @@
 using Edu.Wisc.Forest.Flel.Util;
 using System.Collections.Generic;
 
-namespace Landis.Extension.Output.WildlifeHabitat
+namespace Landis.Extension.Output.LocalHabitat
 {
 
     /// <summary>

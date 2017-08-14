@@ -4,7 +4,7 @@ using Edu.Wisc.Forest.Flel.Util;
 using Landis.Core;
 using System.Collections.Generic;
 
-namespace Landis.Extension.Output.WildlifeHabitat
+namespace Landis.Extension.Output.LocalHabitat
 {
     /// <summary>
     /// A parser that reads the plug-in's parameters from text input.
