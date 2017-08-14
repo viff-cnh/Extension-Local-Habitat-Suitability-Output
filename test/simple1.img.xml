@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en"><Esri><CreaDate>20140910</CreaDate><CreaTime>14383700</CreaTime><ArcGISFormat>1.0</ArcGISFormat><ArcGISstyle>FGDC CSDGM Metadata</ArcGISstyle><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="C:\BRM\GIS\Toolboxes\BRMTools.tbx\Reclassify" Date="20140910" Time="143837">Reclassify ecoregions.gis Value "1 1;1 2 1" C:\BRM\LANDIS_II\code\wildlife-habitat\trunk\test\simple1.img DATA</Process></lineage></DataProperties></Esri></metadata>
