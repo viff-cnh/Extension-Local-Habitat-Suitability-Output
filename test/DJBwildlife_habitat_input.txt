@@ -4,7 +4,7 @@ Timestep  1
 
 OutputTimestep  10
 
-MapFileNames	output/habitat/{wildlifeName}-{timestep}.img
+MapFileNames	output/habitat/{HabitatName}-{timestep}.img
 
 
 SuitabilityFiles  	DJBforesttype_tsh_exampleFTypeTimeSinceHarvest.txt
