@@ -30,7 +30,7 @@ Source:  {#ReferenceDLLDir}\Landis.Library.Metadata.dll; DestDir: {app}\bin\exte
 ; The user guide
 #define UserGuideSrc "LANDIS-II Local Habitat Suitability Output vX.Y User Guide.pdf"
 #define UserGuide    StringChange(UserGuideSrc, "X.Y", MajorMinor)
-Source: docs\{#UserGuideSrc}; DestDir: {app}\docs; DestName: {#UserGuide}
+Source: docs\{#UserGuide}; DestDir: {app}\docs; DestName: {#UserGuide}
 
 ; Sample input files
 Source: examples\*; DestDir: {app}\examples\{#ExtensionName}\{#MajorMinor}; Flags: recursesubdirs
