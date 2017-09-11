@@ -351,7 +351,7 @@ namespace Landis.Extension.Output.LocalHabitat
                 // if output timestep then write all maps
                 if ((ModelCore.CurrentTime % parameters.OutputTimestep) == 0)
                 {
-                    string mapName = mySuitabilityParameters.WildlifeName;
+                    string mapName = mySuitabilityParameters.HabitatName;
                     string path = MapFileNames.ReplaceTemplateVars(mapNameTemplate, mapName, modelCore.CurrentTime);
                     ModelCore.UI.WriteLine("   Writing Habitat Output map to {0} ...", path);
                     using (IOutputRaster<IntPixel> outputRaster = modelCore.CreateRaster<IntPixel>(path, modelCore.Landscape.Dimensions))

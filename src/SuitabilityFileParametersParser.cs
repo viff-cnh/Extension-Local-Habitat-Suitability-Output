@@ -38,9 +38,9 @@ namespace Landis.Extension.Output.LocalHabitat
 
             SuitabilityParameters suitabilityParameters = new SuitabilityParameters(PlugIn.ModelCore.Species.Count);
 
-            InputVar<string> wildlifeName = new InputVar<string>("WildlifeName");
-            ReadVar(wildlifeName);
-            suitabilityParameters.WildlifeName = wildlifeName.Value;
+            InputVar<string> habitatName = new InputVar<string>("HabitatName");
+            ReadVar(habitatName);
+            suitabilityParameters.HabitatName = habitatName.Value;
 
             InputVar<string> suitabilityType = new InputVar<string>("SuitabilityType");
             ReadVar(suitabilityType);

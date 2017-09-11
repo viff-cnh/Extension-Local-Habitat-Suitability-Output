@@ -9,7 +9,7 @@ namespace Landis.Extension.Output.LocalHabitat
     /// </summary>
     public static class MapFileNames
     {
-        public const string NameVar = "wildlifeName";
+        public const string NameVar = "HabitatName";
         public const string TimestepVar = "timestep";
 
         private static IDictionary<string, bool> knownVars;
@@ -36,10 +36,10 @@ namespace Landis.Extension.Output.LocalHabitat
         //---------------------------------------------------------------------
 
         public static string ReplaceTemplateVars(string template,
-                                                 string wildlifeName,
+                                                 string habitatName,
                                                  int    timestep)
         {
-            varValues[NameVar] = wildlifeName;
+            varValues[NameVar] = habitatName;
             varValues[TimestepVar] = timestep.ToString();
             return OutputPath.ReplaceTemplateVars(template, varValues);
         }

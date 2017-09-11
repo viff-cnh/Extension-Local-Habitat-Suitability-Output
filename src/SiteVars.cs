@@ -39,6 +39,8 @@ namespace Landis.Extension.Output.LocalHabitat
             timeOfLastHarvest = PlugIn.ModelCore.GetSiteVar<int>("Harvest.TimeOfLastEvent");
             fireSeverity = PlugIn.ModelCore.GetSiteVar<byte>("Fire.Severity");
             timeOfLastFire = PlugIn.ModelCore.GetSiteVar<int>("Fire.TimeOfLastEvent");
+            if (timeOfLastFire == null)
+                timeOfLastFire = PlugIn.ModelCore.GetSiteVar<int>("Fire.TimeOfLastFire");  // Temporary fix for Base Fire - should be renamed Fire.TimeOfLastEvent - Base Fire Issue #12
 
             yearOfFire = PlugIn.ModelCore.Landscape.NewSiteVar<Dictionary<int,int>>();
             ageAtFireYear = PlugIn.ModelCore.Landscape.NewSiteVar<Dictionary<int, int>>();
@@ -61,38 +63,62 @@ namespace Landis.Extension.Output.LocalHabitat
             foreach (Site site in PlugIn.ModelCore.Landscape.ActiveSites)
             {
                 Dictionary<int, int> yofDict = new Dictionary<int, int>();
-                yofDict.Add(0, -99999);
+                for (int index = 0; index < suitabilityCount; index++)
+                {
+                    yofDict.Add(index, -99999);
+                }
                 SiteVars.YearOfFire[site] = yofDict;
 
                 Dictionary<int, int> ageFireDict = new Dictionary<int, int>();
-                ageFireDict.Add(0, 0);
+                for (int index = 0; index < suitabilityCount; index++)
+                {
+                    ageFireDict.Add(index, 0);
+                }
                 SiteVars.AgeAtFireYear[site] = ageFireDict;
 
                 Dictionary<int, int> yohDict = new Dictionary<int, int>();
-                yohDict.Add(0, 0);
+                for (int index = 0; index < suitabilityCount; index++)
+                {
+                    yohDict.Add(index, 0);
+                }
                 SiteVars.YearOfHarvest[site] = yohDict;
 
                 Dictionary<int, int> ageHarvestDict = new Dictionary<int, int>();
-                ageHarvestDict.Add(0, 0);
+                for (int index = 0; index < suitabilityCount; index++)
+                {
+                    ageHarvestDict.Add(index, 0);
+                }
                 SiteVars.AgeAtHarvestYear[site] = ageHarvestDict;
 
                 int[] domAgeArray = new int[2];
                 SiteVars.DominantAge[site] = domAgeArray;
 
                 Dictionary<int, int> forestTypeFireDict = new Dictionary<int, int>();
-                forestTypeFireDict.Add(0, 0);
+                for (int index = 0; index < suitabilityCount; index++)
+                {
+                    forestTypeFireDict.Add(index, 0);
+                }
                 SiteVars.ForestTypeAtFireYear[site] = forestTypeFireDict;
 
                 Dictionary<int, int> forestTypeHarvestDict = new Dictionary<int, int>();
-                forestTypeHarvestDict.Add(0, 0);
+                for (int index = 0; index < suitabilityCount; index++)
+                {
+                    forestTypeHarvestDict.Add(index, 0);
+                }
                 SiteVars.ForestTypeAtHarvestYear[site] = forestTypeHarvestDict;
 
                 Dictionary<int, double> suitValDict = new Dictionary<int, double>();
-                suitValDict.Add(0, 0.0);
+                for (int index = 0; index < suitabilityCount; index++)
+                {
+                    suitValDict.Add(index, 0.0);
+                }
                 SiteVars.SuitabilityValue[site] = suitValDict;
 
                 Dictionary<int, double> suitWtDict = new Dictionary<int, double>();
-                suitWtDict.Add(0, 0.0);
+                for (int index = 0; index < suitabilityCount; index++)
+                {
+                    suitWtDict.Add(index, 0.0);
+                }
                 SiteVars.SuitabilityWeight[site] = suitWtDict;
 
                 Dictionary<int, int[]> forTypeDict = new Dictionary<int, int[]>();

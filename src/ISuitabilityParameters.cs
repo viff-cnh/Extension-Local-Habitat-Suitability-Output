@@ -66,9 +66,9 @@ namespace Landis.Extension.Output.LocalHabitat
 
         //---------------------------------------------------------------------
        /// <summary>
-       /// Wildlife Name
+       /// Habitat Name
        /// </summary>
-       string WildlifeName
+       string HabitatName
        {
            get;
 

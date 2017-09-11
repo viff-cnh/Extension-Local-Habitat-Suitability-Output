@@ -9,7 +9,7 @@ namespace Landis.Extension.Output.LocalHabitat
     public class SuitabilityParameters
         : ISuitabilityParameters
     {
-        private string wildlifeName;
+        private string habitatName;
         private string suitabilityType;
         private string disturbanceType;
         private double[] coefficients;
@@ -20,15 +20,15 @@ namespace Landis.Extension.Output.LocalHabitat
       
         //---------------------------------------------------------------------
 
-        public string WildlifeName
+        public string HabitatName
         {
             get
             {
-                return wildlifeName;
+                return habitatName;
             }
             set
             {
-                wildlifeName = value;
+                habitatName = value;
             }
         }
 
@@ -126,7 +126,7 @@ namespace Landis.Extension.Output.LocalHabitat
         /// </summary>
         public SuitabilityParameters(int speciesCount)
         {
-            wildlifeName = "wildlifeName";
+            habitatName = "habitatName";
             coefficients = new double[speciesCount];
             forestTypes = new List<IMapDefinition>();
             fireSeverities = new Dictionary<int, double>();
