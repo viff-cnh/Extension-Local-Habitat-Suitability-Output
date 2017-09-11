@@ -25,7 +25,7 @@ namespace Landis.Extension.Output.LocalHabitat
         {
             get
             {
-                return PlugIn.ExtensionName;
+                return PlugIn.PlugInName;
             }
         }
         //---------------------------------------------------------------------
@@ -34,8 +34,8 @@ namespace Landis.Extension.Output.LocalHabitat
         {
             InputVar<string> landisData = new InputVar<string>("LandisData");
             ReadVar(landisData);
-            if (landisData.Value.Actual != PlugIn.ExtensionName)
-                throw new InputValueException(landisData.Value.String, "The value is not \"{0}\"", PlugIn.ExtensionName);
+            if (landisData.Value.Actual != PlugIn.PlugInName)
+                throw new InputValueException(landisData.Value.String, "The value is not \"{0}\"", PlugIn.PlugInName);
 
             InputParameters parameters = new InputParameters(SpeciesDataset.Count);
 

@@ -43,5 +43,14 @@ namespace Landis.Extension.Output.LocalHabitat
             varValues[TimestepVar] = timestep.ToString();
             return OutputPath.ReplaceTemplateVars(template, varValues);
         }
+        //---------------------------------------------------------------------
+
+        public static string ReplaceTemplateVars(string template,
+                                                 string habitatName)
+        {
+            varValues[NameVar] = habitatName;
+            varValues[TimestepVar] = "{timestep}";
+            return OutputPath.ReplaceTemplateVars(template, varValues);
+        }
     }
 }

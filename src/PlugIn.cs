@@ -12,7 +12,7 @@ namespace Landis.Extension.Output.LocalHabitat
     {
 
         public static readonly  new ExtensionType Type = new ExtensionType("output");
-        public static readonly string ExtensionName =  "Local Habitat Output";
+        public static readonly string PlugInName = "Local Habitat Output";
 
         private string mapNameTemplate;
         private List<string> suitabilityFiles;
@@ -25,7 +25,7 @@ namespace Landis.Extension.Output.LocalHabitat
         //---------------------------------------------------------------------
 
         public PlugIn()
-            : base(ExtensionName, Type)
+            : base(PlugInName, Type)
         {
         }
 
@@ -63,8 +63,9 @@ namespace Landis.Extension.Output.LocalHabitat
             this.suitabilityFiles = parameters.SuitabilityFiles;
             this.suitabilityParameters = parameters.SuitabilityParameters;
             SiteVars.Initialize(this.suitabilityFiles.Count);
-            
 
+            if (parameters.MapFileNames != null)
+                MetadataHandler.InitializeMetadata(parameters.Timestep, parameters.MapFileNames, parameters.SuitabilityParameters, ModelCore);
         }
 
         //---------------------------------------------------------------------
