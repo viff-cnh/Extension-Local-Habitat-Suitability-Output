@@ -25,7 +25,7 @@
 
 ; The extension's assembly
 Source: {#LandisExtDir}\{#ExtensionAssembly}.dll; DestDir: {app}\bin\extensions
-;Source:  {#ReferenceDLLDir}\Landis.Library.Metadata.dll; DestDir: {app}\bin\extensions
+Source:  {#ReferenceDLLDir}\Landis.Library.Metadata.dll; DestDir: {app}\bin\extensions
 
 ; The user guide
 #define UserGuideSrc "LANDIS-II Local Habitat Suitability Output vX.Y User Guide.pdf"
